@@ -1,20 +1,42 @@
 {
-    "name": "BikashBot",    
+    "name": "BikashRobot", 
+    "description": "A Telegram Best Artificial Intelligence Chat Bot , written in Python with Pyrogram",
+    "logo": "https://te.legra.ph/file/f73af9a4ffe130a83d8d2.jpg",
     "env": {
         "BOT_TOKEN": {
-            "description": "telegram bot token here",
+            "description": "Input Bot token here",
             "required": true
-        },        
+        },
+        "OWNER_USERNAME": {
+            "description": "Input Owner Username here ( Without @)",
+            "required": true
+        },
+        "SUPPORT_GROUP": {
+            "description": "Input support group username here ( Without @)",
+            "required": true
+        },
+        "UPDATES_CHANNEL": {
+            "description": "Input updates channel username here ( Without @) ",
+            "required": true
+        },
+        "BOT_USERNAME": {
+            "description": "Input Bot USERNAME here ( Without @)",
+            "required": true
+        },  
+        "BOT_IMAGE": {
+            "description": "Input Bot start pic link here",
+            "required": true
+        },       
         "MONGO_URL": {
-            "description": "mongo db url here",
+            "description": "Input mongo db url here",
             "required": true
         },
         "API_ID": {
-            "description": "telegram api id here",
+            "description": "Input api id here",
             "required": true
         },
         "API_HASH": {
-            "description": "telegram api hash here",
+            "description": "Input api hash here",
             "required": true
         }
     },
