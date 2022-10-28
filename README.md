@@ -22,6 +22,10 @@ Click Below Picture To Open VChat Bot Owner Id...
 
 [Kaali Linux](https://youtu.be/_nZT5lhcL8U)
 
+## 🥀 Chat Bot Deploy Tutorial On Kaali Linux 
+
+[Kaali Linux](https://youtu.be/_nZT5lhcL8U)
+
 ## ⚒️ 𝐂𝐫𝐞𝐝𝐢𝐭
 [𝐁𝐢𝐤𝐚𝐬𝐡](https://t.me/BikashHalder)
 
