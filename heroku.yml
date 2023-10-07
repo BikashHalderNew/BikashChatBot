@@ -2,4 +2,4 @@ build:
   docker:
     worker: Dockerfile
 run:
-  worker: python3 Bikash.py
+  worker: python3 Lily.py
