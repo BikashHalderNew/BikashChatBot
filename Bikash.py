@@ -5,7 +5,6 @@ import requests
 import random
 import os
 import re
-from Bikash import Bgt
 
 
 API_ID = os.environ.get("API_ID", "none") 
