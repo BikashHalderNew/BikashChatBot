@@ -1,7 +1,7 @@
 {
-    "name": "BikashRobot", 
+    "name": "queenRobot", 
     "description": "A Telegram Best Artificial Intelligence Chat Bot , written in Python with Pyrogram",
-    "logo": "https://te.legra.ph/file/f73af9a4ffe130a83d8d2.jpg",
+    "logo": "https://telegra.ph/file/2bbff2b127c112cff09a0.mp4",
     "stack": "container",
     "env": {
         "BOT_TOKEN": {
