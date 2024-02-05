@@ -35,7 +35,7 @@ async def is_admins(chat_id: int):
     ]
 
 
-@bot.on_message(filters.command("start") & filters.private & ~filters.edited)
+@bot.on_message(filters.command("start") & filters.private)
 async def start_(client: Client, message: Message):
     await message.reply_photo(
         photo=f"{BOT_IMAGE}",
@@ -64,7 +64,7 @@ async def start_(client: Client, message: Message):
     )
     
     
-@bot.on_message(filters.command(["/start", f"start@{BOT_USERNAME}", "/alive", ".alive", "#bikash", "#aditya"]) & filters.group & ~filters.edited)
+@bot.on_message(filters.command(["/start", f"start@{BOT_USERNAME}", "/alive", ".alive", "#bikash", "#aditya"]) & filters.group)
 async def start(client: Client, message: Message):
     await message.reply_photo(
         photo=f"{BOT_IMAGE}",
@@ -352,4 +352,6 @@ async def vprivatesticker(client: Client, message: Message):
            if not Yo == "text":
                await message.reply_sticker(f"{hey}")
        
-bot.run()
+bot.start()
+print("BGT CHAT BOT BOOTED SUCCESSFULLY")
+idle()
