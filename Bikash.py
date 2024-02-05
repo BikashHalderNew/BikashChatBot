@@ -1,6 +1,7 @@
 from pyrogram import Client, filters, idle
 from pyrogram.types import *
 from pymongo import MongoClient
+from pyrogram import enums
 import requests
 import random
 import os
@@ -152,7 +153,7 @@ async def vai(client: Client, message: Message):
        v = vdb["vDb"]["v"] 
        is_v = v.find_one({"chat_id": message.chat.id})
        if not is_v:
-           await bot.send_chat_action(message.chat.id, "typing")
+           await bot.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
            K = []  
            is_chat = chatai.find({"word": message.text})  
            k = chatai.find_one({"word": message.text})      
@@ -175,7 +176,7 @@ async def vai(client: Client, message: Message):
        bot_id = getme.id                             
        if message.reply_to_message.from_user.id == bot_id: 
            if not is_v:                   
-               await bot.send_chat_action(message.chat.id, "typing")
+               await bot.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
                K = []  
                is_chat = chatai.find({"word": message.text})
                k = chatai.find_one({"word": message.text})      
@@ -218,7 +219,7 @@ async def vstickerai(client: Client, message: Message):
        v = vdb["vDb"]["v"] 
        is_v = v.find_one({"chat_id": message.chat.id})
        if not is_v:
-           await bot.send_chat_action(message.chat.id, "typing")
+           await bot.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
            K = []  
            is_chat = chatai.find({"word": message.sticker.file_unique_id})      
            k = chatai.find_one({"word": message.text})      
@@ -241,7 +242,7 @@ async def vstickerai(client: Client, message: Message):
        bot_id = getme.id
        if message.reply_to_message.from_user.id == bot_id: 
            if not is_v:                    
-               await bot.send_chat_action(message.chat.id, "typing")
+               await bot.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
                K = []  
                is_chat = chatai.find({"word": message.text})
                k = chatai.find_one({"word": message.text})      
@@ -280,7 +281,7 @@ async def vprivate(client: Client, message: Message):
    chatdb = MongoClient(MONGO_URL)
    chatai = chatdb["Word"]["WordDb"]
    if not message.reply_to_message: 
-       await bot.send_chat_action(message.chat.id, "typing")
+       await bot.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
        K = []  
        is_chat = chatai.find({"word": message.text})                 
        for x in is_chat:
@@ -296,7 +297,7 @@ async def vprivate(client: Client, message: Message):
        getme = await bot.get_me()
        bot_id = getme.id       
        if message.reply_to_message.from_user.id == bot_id:                    
-           await bot.send_chat_action(message.chat.id, "typing")
+           await bot.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
            K = []  
            is_chat = chatai.find({"word": message.text})                 
            for x in is_chat:
@@ -323,7 +324,7 @@ async def vprivatesticker(client: Client, message: Message):
    chatdb = MongoClient(MONGO_URL)
    chatai = chatdb["Word"]["WordDb"] 
    if not message.reply_to_message:
-       await bot.send_chat_action(message.chat.id, "typing")
+       await bot.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
        K = []  
        is_chat = chatai.find({"word": message.sticker.file_unique_id})                 
        for x in is_chat:
@@ -339,7 +340,7 @@ async def vprivatesticker(client: Client, message: Message):
        getme = await bot.get_me()
        bot_id = getme.id       
        if message.reply_to_message.from_user.id == bot_id:                    
-           await bot.send_chat_action(message.chat.id, "typing")
+           await bot.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
            K = []  
            is_chat = chatai.find({"word": message.sticker.file_unique_id})                 
            for x in is_chat:
